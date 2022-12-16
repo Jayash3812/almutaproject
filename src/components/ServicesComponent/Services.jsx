@@ -11,75 +11,78 @@ import sendmoney from "../../assets/icons/sendmoney.png";
 import services from "../../assets/icons/services.png";
 import myfavorite from "../../assets/icons/myfavorite.png";
 import search_icon from "../../assets/icons/search_icon.png";
+import { Grid } from "@mui/material";
 
 import { Link } from "react-router-dom";
 
-
-
 const Services = () => {
-  
   return (
     <div>
-      <h2>Services</h2>
-      <div className="services_search">
-        <h4>Search services</h4>
-        <a href="">
-          <img src={search_icon} alt="search_icon" />
-        </a>
-      </div>
-      <div className="services_items">
-        <div className="services_items__left">
-          <div className="services_items__main">
-            <a className="services_items__main__card" href="">
-              <img src={topup} alt="topup_pic" />
-              <span>Top Up</span>
-            </a>
-            <a className="services_items__main__card" href="">
-              <Link to="/cashout">
-                <img src={cashout} alt="cashout"/>
-                <span>Cash Out</span>
-              </Link>
-            </a>
+      <Grid container direction="column">
+        <h2>Services</h2>
+        <Grid container direction="row">
+          <h4>Search services</h4>
+          <a href="">
+            <img src={search_icon} alt="search_icon" />
+          </a>
+        </Grid>
+        {/* <div className="services_search"> */}
 
-            <a className="services_items__main__card" href="">
-              <Link to="/billpayment">
-                <img src={billpayments} alt="billpayments" />{" "}
-                <span>Bill payments</span>
-              </Link>
-            </a>
-            <a className="services_items__main__card" href="">
-              <Link to="/transfer">
-                <img src={transfer} alt="" /> <span>Transfers</span>
-              </Link>
-            </a>
-            <a className="services_items__main__card" href="">
-              <img src={p2g} alt="" /> <span>P2G</span>
-            </a>
-          </div>
-          <div className="services_items__main">
-            <a className="services_items__main__card" href="">
-              <img src={qr} alt="qr" />
-              <span>QR/Bar code</span>
-            </a>
-            <a className="services_items__main__card" href="">
-              <img src={shopping} alt="shopping" />
-              <span>Shopping</span>
-            </a>
-            <a className="services_items__main__card" href="">
-              <img src={sendmoney} alt="sendmoney" />
-              <span>Send money</span>
-            </a>
-            <a className="services_items__main__card" href="">
-              <img src={services} alt="services" />
-              <span>Services</span>
-            </a>
-            <a className="services_items__main__card" href="">
-              <img src={myfavorite} alt="myfavorite" />
-              <span>My Favorite</span>
-            </a>
+        {/* </div> */}
+        <div className="services_items">
+          <div className="services_items__left">
+            <div className="services_items__main">
+              <a className="services_items__main__card" href="">
+                <img src={topup} alt="topup_pic" />
+                <span>Top Up</span>
+              </a>
+              <a className="services_items__main__card" href="">
+                <Link to="/cashout">
+                  <img src={cashout} alt="cashout" />
+                  <span>Cash Out</span>
+                </Link>
+              </a>
+
+              <a className="services_items__main__card" href="">
+                <Link to="/billpayment">
+                  <img src={billpayments} alt="billpayments" />{" "}
+                  <span>Bill payments</span>
+                </Link>
+              </a>
+              <a className="services_items__main__card" href="">
+                <Link to="/transfer">
+                  <img src={transfer} alt="" /> <span>Transfers</span>
+                </Link>
+              </a>
+              <a className="services_items__main__card" href="">
+                <img src={p2g} alt="" /> <span>P2G</span>
+              </a>
+            </div>
+            <div className="services_items__main">
+              <a className="services_items__main__card" href="">
+                <img src={qr} alt="qr" />
+                <span>QR/Bar code</span>
+              </a>
+              <a className="services_items__main__card" href="">
+                <img src={shopping} alt="shopping" />
+                <span>Shopping</span>
+              </a>
+              <a className="services_items__main__card" href="">
+                <img src={sendmoney} alt="sendmoney" />
+                <span>Send money</span>
+              </a>
+              <a className="services_items__main__card" href="">
+                <img src={services} alt="services" />
+                <span>Services</span>
+              </a>
+              <a className="services_items__main__card" href="">
+                <img src={myfavorite} alt="myfavorite" />
+                <span>My Favorite</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </Grid>
     </div>
   );
 };

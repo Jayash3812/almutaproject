@@ -4,7 +4,7 @@ import gps_icon from "../../assets/icons/gps_icon.png";
 import search_icon from "../../assets/icons/search_icon.png";
 import translate_icon from "../../assets/icons/translate_icon.png";
 import "../../components/Nav/nav.css";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
