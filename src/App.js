@@ -8,13 +8,16 @@ import { Nearby } from "./components/Near by/Nearby";
 import { Contactus } from "./components/Contact Us/Contactus";
 import { History } from "./components/History/History";
 import Services from "./components/ServicesComponent/Services";
+import Popular from "./components/PopularServices/Popular";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Nav />
+        <Popular />
         <Services />
+
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/nearby" element={<Nearby />} />

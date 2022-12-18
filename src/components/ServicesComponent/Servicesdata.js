@@ -22,13 +22,14 @@ export const data = [
   { id: 10, image: myfavorite, text: ">My Favorite", link: "" },
 ];
 
-export const dataGroup = [
+export const dataGroupItems = [
   {
     id: 1,
     name: "Internet",
+    category: "",
   },
-  { id: 2, name: "Landline" },
-  { id: 3, name: "Electricity" },
-  { id: 4, name: "Water" },
-  { id: 5, name: "Utility" },
+  { id: 2, name: "Landline", category: "" },
+  { id: 3, name: "Electricity", category: "" },
+  { id: 4, name: "Water", category: "" },
+  { id: 5, name: "Utility", category: "" },
 ];

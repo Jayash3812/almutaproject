@@ -1,7 +1,7 @@
 import React from "react";
 import "../../components/ServicesComponent/services.css";
 import search_icon from "../../assets/icons/search_icon.png";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import { data, dataGroup } from "./Servicesdata";
 import home from "../../assets/icons/home_icon.png";
@@ -9,17 +9,18 @@ import arrowright from "../../assets/icons/arrowright.png";
 
 const Services = () => {
   return (
-    <div className="services">
+    <Container maxWidth="1730px">
+      {/* <div className="services"> */}
       <Grid
         container
         direction="row"
         spacing={1}
         justifyContent="space-between"
         backgroundColor="#e5e5e5"
-        sx={{ border: "1px solid black", padding: "40px" }}
+        sx={{ padding: "40px" }}
       >
         <Grid item sx={{ mb: "20px" }}>
-          <h2>Services</h2>
+          <h2 className="services_title">Services</h2>
         </Grid>
 
         <Grid
@@ -39,7 +40,7 @@ const Services = () => {
           spacing={1}
           direction="row"
           // alignItems="center"
-          sx={{ width: "70%" }}
+          sx={{ width: "75%" }}
         >
           {data.map((item) => (
             <Grid item md={2.4} sx={{}}>
@@ -67,41 +68,45 @@ const Services = () => {
         <Grid
           container
           direction="column"
-          sx={{ width: "30%" }}
+          sx={{ width: "25%" }}
           spacing={4}
           justifyContent="center"
           alignItems="center"
         >
-          {dataGroup.map((group) => (
-            <Grid item>
-              <Link>
-                <div className="services_group_items">
-                  <Grid
-                    item
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "18px",
-                      padding: "10px",
-                    }}
-                  >
-                    <img src={home} alt="home_icon" />
-                    <span
-                      style={{ color: "#188AC8", fontFamily: "NeoSansArabic" }}
+          {/* {dataGroup.map((group) => (
+              <Grid item>
+                <Link>
+                  <div className="services_group_items">
+                    <Grid
+                      item
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "18px",
+                        padding: "10px",
+                      }}
                     >
-                      {group.name}
-                    </span>
-                  </Grid>
-                  <Grid item>
-                    <img src={arrowright} alt="arrowright" />
-                  </Grid>
-                </div>
-              </Link>
-            </Grid>
-          ))}
+                      <img src={home} alt="home_icon" />
+                      <span
+                        style={{
+                          color: "#188AC8",
+                          fontFamily: "NeoSansArabic",
+                        }}
+                      >
+                        {group.name}
+                      </span>
+                    </Grid>
+                    <Grid item>
+                      <img src={arrowright} alt="arrowright" />
+                    </Grid>
+                  </div>
+                </Link>
+              </Grid>
+            ))} */}
         </Grid>
       </Grid>
-    </div>
+      {/* </div> */}
+    </Container>
   );
 };
 
