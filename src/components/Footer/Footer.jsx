@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="footer_vline"></div>
         </Grid>
 
-        <Grid item>
+        <Grid item sx={{}}>
           <div className="footer_info">
             <div className="footer_info__item">
               <div className="footer_info__text">
@@ -88,6 +88,7 @@ const Footer = () => {
               <div className="footer_info__text">
                 <img src={phone} alt="phone" /> <span>0700 700 55</span>
               </div>
+              <div className="footer_info_line"></div>
             </div>
           </div>
         </Grid>

@@ -31,14 +31,14 @@
 
 .footer_info_line {
   border-bottom: 1px solid white;
-  width: 300px;
+  width: 250px;
 }
 
 .footer_bottom_line {
   border-bottom: 1px solid white;
   width: 93%;
   margin-bottom: 40px;
-  padding: 0px 50px;
+  padding: 20px 0px;
 }
 
 .footer_icons {
