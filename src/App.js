@@ -16,8 +16,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <Popular />
-        <Services />
+        {/* <Popular /> */}
+        {/* <Services /> */}
 
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/history" element={<History />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
       <div className="container">
         {/* <Landing/> */}
