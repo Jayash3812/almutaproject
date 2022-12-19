@@ -43,7 +43,7 @@ const Services = () => {
           sx={{ width: "75%" }}
         >
           {data.map((item) => (
-            <Grid item md={2.4} sx={{}}>
+            <Grid item md={2.4} fullWidth>
               <a className="services_items__main__card" href="">
                 <Link to={item.link}>
                   <Box

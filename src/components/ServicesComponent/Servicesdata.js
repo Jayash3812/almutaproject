@@ -10,16 +10,22 @@ import services from "../../assets/icons/services.png";
 import myfavorite from "../../assets/icons/myfavorite.png";
 
 export const data = [
-  { id: 1, image: topup, text: "Top Up", link: "" },
-  { id: 2, image: cashout, text: "Cash Out", link: "/cashout" },
-  { id: 3, image: billpayments, text: "Bill payments", link: "/billpayment" },
-  { id: 4, image: transfer, text: "Transfers", link: "/transfer" },
-  { id: 5, image: p2g, text: "P2G", link: "" },
-  { id: 6, image: qr, text: ">QR/Bar code", link: "/qr" },
-  { id: 7, image: shopping, text: "Shopping", link: "/shopping" },
-  { id: 8, image: sendmoney, text: "Send money", link: "" },
-  { id: 9, image: services, text: "Services", link: "" },
-  { id: 10, image: myfavorite, text: ">My Favorite", link: "" },
+  { id: 1, image: topup, text: "Top Up", link: "", value: "1" },
+  { id: 2, image: cashout, text: "Cash Out", link: "/cashout", value: "2" },
+  {
+    id: 3,
+    image: billpayments,
+    text: "Bill payments",
+    link: "/billpayment",
+    value: "3",
+  },
+  { id: 4, image: transfer, text: "Transfers", link: "/transfer", value: "4" },
+  { id: 5, image: p2g, text: "P2G", link: "", value: "5" },
+  { id: 6, image: qr, text: ">QR/Bar code", link: "/qr", value: "6" },
+  { id: 7, image: shopping, text: "Shopping", link: "/shopping", value: "7" },
+  { id: 8, image: sendmoney, text: "Send money", link: "", value: "8" },
+  { id: 9, image: services, text: "Services", link: "", value: "9" },
+  { id: 10, image: myfavorite, text: ">My Favorite", link: "", value: "10" },
 ];
 
 export const dataGroupItems = [

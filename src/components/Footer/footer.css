@@ -1,0 +1,50 @@
+.footer_item {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer_item a,
+.footer_info span {
+  font-family: "NeoSansArabic";
+  color: white;
+  font-size: 25px;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer_info__text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.footer_vline {
+  border-left: 1px solid white;
+  height: 200px;
+}
+
+.footer_info_line {
+  border-bottom: 1px solid white;
+  width: 300px;
+}
+
+.footer_bottom_line {
+  border-bottom: 1px solid white;
+  width: 93%;
+  margin-bottom: 40px;
+  padding: 0px 50px;
+}
+
+.footer_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

@@ -11,14 +11,19 @@ const Nav = () => {
   return (
     <Container maxWidth="1730px">
       <AppBar
-        sx={{ backgroundColor: "#E5E5E5", paddingTop: "20px" }}
+        sx={{
+          backgroundColor: "#E5E5E5",
+          paddingTop: "20px",
+          width: "100.2%",
+          ml: "-5px",
+        }}
         position="static"
       >
         <Toolbar>
           <Grid
             container
             direction="row"
-            justifyContent="space-evenly"
+            justifyContent="space-around"
             alignItems="center"
             spacing={10}
           >
@@ -26,22 +31,22 @@ const Nav = () => {
               <img src={nav_logo} alt="logo" />
             </Grid>
 
-            <Grid item xs={1}>
+            <Grid item md={1} xs={2}>
               <Link to="/home">
                 <button className="grid-buttons">Home</button>
               </Link>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item md={1} xs={2}>
               <Link to="/nearby">
                 <button className="grid-buttons"> Near By</button>
               </Link>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item md={1} xs={2}>
               <Link to="/contactus">
                 <button className="grid-buttons"> Contact us</button>
               </Link>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item md={1} xs={2}>
               <Link to="/history">
                 <button className="grid-buttons">Hisory</button>
               </Link>

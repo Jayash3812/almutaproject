@@ -9,6 +9,7 @@ import { Contactus } from "./components/Contact Us/Contactus";
 import { History } from "./components/History/History";
 import Services from "./components/ServicesComponent/Services";
 import Popular from "./components/PopularServices/Popular";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/history" element={<History />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
       <div className="container">
         {/* <Landing/> */}
