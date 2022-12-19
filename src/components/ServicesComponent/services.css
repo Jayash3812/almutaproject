@@ -1,41 +1,4 @@
-.services {
-  background-color: #e5e5e5;
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-.services_search,
-.services h2 {
-  display: flex;
-  justify-content: space-between;
-  font-family: "NeoSansArabic-Medium";
-}
-
-.services_search {
-  margin-bottom: 25px;
-}
-
-.services_search a {
-  background-color: white;
-  margin-right: 120px;
-}
-
-.services_items {
-  display: flex;
-  flex-direction: row;
-}
-
-.services_items__main {
-  display: flex;
-  flex-direction: row;
-  gap: 22px;
-  margin-bottom: 42px;
-}
-
-.services_items__main:last-child {
-  margin-bottom: 0px;
-}
-
-.services h2 {
+.services_title {
   font-size: 50px;
   margin-bottom: 16px;
 }
@@ -45,7 +8,6 @@
 }
 
 .services_items__main__card {
-  /* background-color: rgba(0, 0, 255, 0.281); */
   font-family: "NeoSansArabic";
   display: flex;
   flex-direction: column;
@@ -75,33 +37,17 @@
   transition: 0.5s;
 }
 
-.services_items__left {
-  margin-right: 109px;
-}
-
-.services_items__right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.services_items__right a {
-  font-family: "NeoSansArabic";
+.services_group_items {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
   align-items: center;
-  width: 420px;
-  background-color: white;
-  padding: 18px;
   justify-content: space-between;
+  background-color: white;
+  width: 280px;
 }
-.services_items__right div {
-  display: flex;
-  align-items: center;
-  gap: 16.32px;
-}
-.services_items__right span {
-  font-family: "NeoSansArabic";
-  color: #188ac8;
+
+@media (max-width: 1024px) {
+  .services_group_items {
+    width: 150px;
+  }
 }

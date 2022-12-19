@@ -19,13 +19,26 @@
   margin-right: 29px;
 }
 
-.navbar_items a {
+.grid-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   color: #00457c;
   padding: 6px 40px;
   border-radius: 10px;
   font-size: 17px;
   font-family: "NeoSansArabic";
+  white-space: nowrap;
+  max-width: 120px;
+  border: none;
+  cursor: pointer;
+}
+
+.grid-buttons:hover {
+  background-color: #00457c;
+  color: white;
+  transition: 0.5s;
 }
 
 .navbar_items a:first-child {

@@ -7,19 +7,25 @@ import { Home } from "./components/Nav/Home";
 import { Nearby } from "./components/Near by/Nearby";
 import { Contactus } from "./components/Contact Us/Contactus";
 import { History } from "./components/History/History";
-
+import Services from "./components/ServicesComponent/Services";
+import Popular from "./components/PopularServices/Popular";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Nav/>
+        <Nav />
+        {/* <Popular /> */}
+        {/* <Services /> */}
+
         <Routes>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/nearby" element={<Nearby/>}/>
-          <Route path="/contactus" element={<Contactus/>}/>
-          <Route path="/history" element={<History/>}/>
+          <Route path="/home" element={<Home />} />
+          <Route path="/nearby" element={<Nearby />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/history" element={<History />} />
         </Routes>
+        {/* <Footer /> */}
       </BrowserRouter>
       <div className="container">
         {/* <Landing/> */}
