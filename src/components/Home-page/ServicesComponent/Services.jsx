@@ -1,13 +1,20 @@
-import React from "react";
-import "../../components/ServicesComponent/services.css";
-import search_icon from "../../assets/icons/search_icon.png";
+import React, { useState } from "react";
+import "./services.css";
+import search_icon from "../../../assets/icons/search_icon.png";
 import { Box, Grid, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import { data, dataGroup } from "./Servicesdata";
-import home from "../../assets/icons/home_icon.png";
-import arrowright from "../../assets/icons/arrowright.png";
+import { data, dataGroupItems } from "../Servicesdata";
+import arrowright from "../../../assets/icons/arrowright.png";
 
 const Services = () => {
+  const [currentCategory, setCurrentCategory] = useState("hell");
+
+  const handleCategory = (e) => {
+    setCurrentCategory(e.target.id);
+  };
+
+  console.log(currentCategory);
+
   return (
     <Container maxWidth="1730px">
       {/* <div className="services"> */}
@@ -43,25 +50,15 @@ const Services = () => {
           sx={{ width: "75%" }}
         >
           {data.map((item) => (
-            <Grid item md={2.4} fullWidth>
-              <a className="services_items__main__card" href="">
-                <Link to={item.link}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "172px",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "30px",
-                      fontFamily: "NeoSansArabic",
-                    }}
-                  >
-                    <img src={item.image} alt="" />
-                    <span>{item.text}</span>
-                  </Box>
-                </Link>
-              </a>
+            <Grid item lg={2.4} md={4} id={item.id}>
+              <div
+                className="services_items__main__card"
+                id={item.category}
+                onClick={handleCategory}
+              >
+                <img src={item.image} alt="" />
+                <span style={{ fontSize: "22px" }}>{item.text}</span>
+              </div>
             </Grid>
           ))}
         </Grid>
@@ -73,7 +70,8 @@ const Services = () => {
           justifyContent="center"
           alignItems="center"
         >
-          {/* {dataGroup.map((group) => (
+          {dataGroupItems.map((group) =>
+            group.category == currentCategory ? (
               <Grid item>
                 <Link>
                   <div className="services_group_items">
@@ -86,7 +84,7 @@ const Services = () => {
                         padding: "10px",
                       }}
                     >
-                      <img src={home} alt="home_icon" />
+                      <img src={group.pic} alt="home_icon" />
                       <span
                         style={{
                           color: "#188AC8",
@@ -102,7 +100,10 @@ const Services = () => {
                   </div>
                 </Link>
               </Grid>
-            ))} */}
+            ) : (
+              ""
+            )
+          )}
         </Grid>
       </Grid>
       {/* </div> */}

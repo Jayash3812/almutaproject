@@ -1,8 +1,8 @@
 import React from "react";
-import "../PopularServices/popular.css";
+import "./popular.css";
 import { Grid, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import { data } from "../ServicesComponent/Servicesdata";
+import { data } from "../Servicesdata";
 
 const Popular = () => {
   return (
@@ -27,16 +27,16 @@ const Popular = () => {
           spacing={1}
           sx={{
             display: "flex",
-            gap: "20px",
+            // gap: "20px",
             backgroundColor: "white",
-            padding: "20px",
+            padding: "10px",
             width: "100%",
             borderRadius: "25px",
             // paddingLeft: "20px",
           }}
         >
-          {data.slice(0, 3).map((item) => (
-            <Grid item md={2.2}>
+          {data.slice(0, 4).map((item) => (
+            <Grid item lg={2} md={2}>
               <Link to={item.link}>
                 <button className="popular-btn">
                   <img src={item.image} alt="" />
@@ -45,17 +45,17 @@ const Popular = () => {
               </Link>
             </Grid>
           ))}
-          <Grid item md={2}>
+          <Grid item lg={2} md={2}>
             <Link to="">
               <button className="popular-btn">
-                <span>+</span>
+                <span style={{ fontSize: "30px" }}>+</span>
               </button>
             </Link>
           </Grid>
-          <Grid item md={2}>
+          <Grid item lg={2} md={2}>
             <Link to="">
               <button className="popular-btn">
-                <span>+</span>
+                <span style={{ fontSize: "30px" }}>+</span>
               </button>
             </Link>
           </Grid>

@@ -46,6 +46,16 @@
   width: 280px;
 }
 
+/* .items_settings {
+  display: flex;
+  flex-direction: column;
+  width: 172px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-family: "NeoSansArabic";
+} */
+
 @media (max-width: 1024px) {
   .services_group_items {
     width: 150px;
