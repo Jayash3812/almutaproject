@@ -8,10 +8,10 @@
   align-items: center;
 }
 
-.navbar_logo {
+/* .navbar_logo {
   margin-right: 421px;
   padding-left: 120px;
-}
+} */
 
 .navbar_items {
   display: flex;
@@ -63,4 +63,25 @@
 
 .navbar_user p:last-child {
   color: #0079c1;
+}
+
+.drawer_user {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.drawer_item {
+  font-family: "NeoSansArabic";
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+  .grid-buttons {
+    padding: 6px 30px;
+    font-size: 15px;
+    max-width: 100px;
+  }
 }
