@@ -2,13 +2,13 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Billpayment } from "./Billpayemt";
-import {Transfers } from "./Transfers";
+import { Transfers } from "./Transfer/Transfers";
 import Services from "./Services";
 import { Cashout } from "./Cashout";
 
 export const Landing = () => {
   return (
-    <div  className="services">
+    <div className="services">
       <BrowserRouter>
         <Grid container spacing={1}>
           <Grid item xs={8}>

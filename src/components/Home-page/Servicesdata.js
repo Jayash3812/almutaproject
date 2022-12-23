@@ -15,6 +15,7 @@ import flowers from "../../assets/fiesta_flowers.png";
 import biodent from "../../assets/biodent.png";
 import pizza from "../../assets/pizza.png";
 import coffeshop from "../../assets/coffeshop.png";
+import logo_acc from "../../assets/logo_account.png";
 
 export const data = [
   {
@@ -53,7 +54,7 @@ export const data = [
   {
     id: 6,
     image: qr,
-    text: ">QR/Bar code",
+    text: "QR/Bar code",
     // link: "/qr",
     value: "6",
     category: "qr",
@@ -85,7 +86,7 @@ export const data = [
   {
     id: 10,
     image: myfavorite,
-    text: ">My Favorite",
+    text: "My Favorite",
     // link: "",
     value: "10",
     category: "myfavorite",
@@ -99,32 +100,59 @@ export const dataGroupItems = [
     name: "Internet",
     category: "billpayments",
   },
-  { id: 2, pic: home, name: "Landline", category: "billpayments" },
-  { id: 3, pic: home, name: "Electricity", category: "billpayments" },
-  { id: 4, pic: home, name: "Water", category: "billpayments" },
-  { id: 5, pic: home, name: "Utility", category: "billpayments" },
-  { id: 6, pic: transfermin, name: "Self Transfer", category: "transfer" },
-  { id: 7, pic: transfermin, name: "Lockal transfer", category: "transfer" },
+  { id: 2, pic: home, name: "Landline", category: "billpayments", link: "" },
+  { id: 3, pic: home, name: "Electricity", category: "billpayments", link: "" },
+  { id: 4, pic: home, name: "Water", category: "billpayments", link: "" },
+  { id: 5, pic: home, name: "Utility", category: "billpayments", link: "" },
+  {
+    id: 6,
+    pic: transfermin,
+    name: "Self Transfer",
+    category: "transfer",
+    link: "",
+  },
+  {
+    id: 7,
+    pic: transfermin,
+    name: "Lockal transfer",
+    category: "transfer",
+    link: "",
+  },
   {
     id: 8,
     pic: transfermin,
     name: "International transfer",
     category: "transfer",
+    link: "",
   },
   {
     id: 9,
     pic: transfermin,
     name: "Transfer to bank Account",
     category: "transfer",
+    link: "",
   },
   {
     id: 10,
     pic: transfermin,
     name: "Transfer to other Wallet",
     category: "transfer",
+    link: "/transfer/wallet",
   },
-  { id: 11, pic: wallet, name: "Cash out by agent", category: "cashout" },
-  { id: 12, pic: wallet, name: "Cash out from ATM", category: "cashout" },
+  {
+    id: 11,
+    pic: wallet,
+    name: "Cash out by agent",
+    category: "cashout",
+    link: "",
+  },
+  {
+    id: 12,
+    pic: wallet,
+    name: "Cash out from ATM",
+    category: "cashout",
+    link: "",
+  },
 ];
 
 export const pictureItems = [
@@ -136,4 +164,28 @@ export const pictureItems = [
   { id: 2, picture: coffeshop, title: "Coffe shop" },
   { id: 3, picture: biodent, title: "Biodent" },
   { id: 4, picture: pizza, title: "NY Pizza" },
+];
+
+export const dataAccounts = [
+  {
+    id: 1,
+    name: "YER Account",
+    balance: "112,450.23",
+    currency: "YER",
+    pic: logo_acc,
+  },
+  {
+    id: 2,
+    name: "YER Account",
+    balance: "112,450.23",
+    currency: "YER",
+    pic: logo_acc,
+  },
+  {
+    id: 3,
+    name: "YER Account",
+    balance: "112,450.23",
+    currency: "YER",
+    pic: logo_acc,
+  },
 ];

@@ -20,7 +20,16 @@ const Offers = () => {
         }}
       >
         {pictureItems.map((item) => (
-          <Grid item lg={3} md={3}>
+          <Grid
+            item
+            lg={3}
+            md={3}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <div className="offers_images">
               <img src={item.picture} alt="" />
               <h2 className="offers_titles">{item.title}</h2>
