@@ -48,3 +48,10 @@
   align-items: center;
   gap: 25px;
 }
+
+@media (max-width: 1450px) {
+  .footer_item a,
+  .footer_info span {
+    font-size: 18px;
+  }
+}

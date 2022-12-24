@@ -65,7 +65,7 @@ const Nav = () => {
                 </Grid>
                 <Grid item lg={1} md={1} sm={1}>
                   <Link to="/history">
-                    <button className="grid-buttons">Hisory</button>
+                    <button className="grid-buttons">History</button>
                   </Link>
                 </Grid>
                 <Grid item lg={2} md={3} sm={1} xs={1} direction="row">

@@ -22,7 +22,7 @@ const Popular = () => {
         <Grid
           container
           direction="row"
-          justifyContent="space-around"
+          justifyContent="center"
           alignItems="center"
           spacing={1}
           sx={{
@@ -36,7 +36,17 @@ const Popular = () => {
           }}
         >
           {data.slice(0, 4).map((item) => (
-            <Grid item lg={2} md={2}>
+            <Grid
+              item
+              lg={2}
+              md={4}
+              sm={6}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Link to={item.link}>
                 <button className="popular-btn">
                   <img src={item.image} alt="" />
@@ -45,14 +55,34 @@ const Popular = () => {
               </Link>
             </Grid>
           ))}
-          <Grid item lg={2} md={2}>
+          <Grid
+            item
+            lg={2}
+            md={4}
+            sm={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Link to="">
               <button className="popular-btn">
                 <span style={{ fontSize: "30px" }}>+</span>
               </button>
             </Link>
           </Grid>
-          <Grid item lg={2} md={2}>
+          <Grid
+            item
+            lg={2}
+            md={4}
+            sm={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Link to="">
               <button className="popular-btn">
                 <span style={{ fontSize: "30px" }}>+</span>

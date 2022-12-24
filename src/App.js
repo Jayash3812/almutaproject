@@ -11,6 +11,8 @@ import Services from "./components/Home-page/ServicesComponent/Services";
 import Popular from "./components/Home-page/PopularServices/Popular";
 import Footer from "./components/Footer/Footer";
 import { Home } from "./components/Home-page/Home";
+import TransferToWallet from "./components/Home-page/ServicesComponent/Transfer/TransferToWallet";
+import { Transfers } from "./components/Home-page/ServicesComponent/Transfer/Transfers";
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
         <Nav />
         {/* <Popular /> */}
         {/* <Services /> */}
-
+        <Transfers />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/nearby" element={<Nearby />} />

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./services.css";
 import search_icon from "../../../assets/icons/search_icon.png";
-import { Box, Grid, Container } from "@mui/material";
+import { Grid, Container, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { data, dataGroupItems } from "../Servicesdata";
 import arrowright from "../../../assets/icons/arrowright.png";
 
 const Services = () => {
-  const [currentCategory, setCurrentCategory] = useState("hell");
+  const [currentCategory, setCurrentCategory] = useState("");
 
   const handleCategory = (e) => {
+    e.preventDefault();
     setCurrentCategory(e.target.id);
   };
 
@@ -50,11 +51,21 @@ const Services = () => {
           sx={{ width: "75%" }}
         >
           {data.map((item) => (
-            <Grid item lg={2.4} md={4} id={item.id}>
+            <Grid
+              item
+              lg={2.4}
+              md={4}
+              id={item.id}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <div
                 className="services_items__main__card"
                 id={item.category}
-                onClick={handleCategory}
+                onClick={(e) => handleCategory(e)}
               >
                 <img src={item.image} alt="" />
                 <span style={{ fontSize: "22px" }}>{item.text}</span>
@@ -67,16 +78,15 @@ const Services = () => {
           direction="column"
           sx={{ width: "25%" }}
           spacing={4}
-          justifyContent="center"
+          justifyContent="flex-start"
           alignItems="center"
         >
           {dataGroupItems.map((group) =>
             group.category == currentCategory ? (
               <Grid item>
-                <Link>
+                <Link to={group.link}>
                   <div className="services_group_items">
-                    <Grid
-                      item
+                    <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
@@ -93,9 +103,13 @@ const Services = () => {
                       >
                         {group.name}
                       </span>
-                    </Grid>
+                    </Box>
                     <Grid item>
-                      <img src={arrowright} alt="arrowright" />
+                      <img
+                        style={{ paddingRight: "20px" }}
+                        src={arrowright}
+                        alt="arrowright"
+                      />
                     </Grid>
                   </div>
                 </Link>
