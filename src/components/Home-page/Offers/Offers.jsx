@@ -16,6 +16,7 @@ const Offers = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           //   border: "1px solid red",
         }}
       >
@@ -23,11 +24,14 @@ const Offers = () => {
           <Grid
             item
             lg={3}
-            md={3}
+            md={6}
+            sm={6}
+            xs={12}
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              // paddingRight: "8px",
             }}
           >
             <div className="offers_images">

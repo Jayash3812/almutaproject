@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router";
 import TransferToWallet from "./TransferToWallet";
 
-export const Transfers = () => {
+const TransferRouting = () => {
   return (
     <Routes>
       <Route path="/transfer/wallet" element={<TransferToWallet />} />
     </Routes>
   );
 };
+
+export default TransferRouting;

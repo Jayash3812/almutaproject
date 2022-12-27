@@ -41,6 +41,7 @@ const Popular = () => {
               lg={2}
               md={4}
               sm={6}
+              xs={12}
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -60,6 +61,7 @@ const Popular = () => {
             lg={2}
             md={4}
             sm={6}
+            xs={12}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -77,6 +79,7 @@ const Popular = () => {
             lg={2}
             md={4}
             sm={6}
+            xs={12}
             sx={{
               display: "flex",
               justifyContent: "center",
