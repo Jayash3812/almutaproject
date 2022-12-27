@@ -25,7 +25,7 @@ const Services = () => {
         spacing={1}
         justifyContent="space-between"
         backgroundColor="#e5e5e5"
-        sx={{ padding: "40px" }}
+        sx={{ padding: { lg: "40px", md: "40px", sm: "20px", xs: "20px" } }}
       >
         <Grid item sx={{ mb: "20px" }}>
           <h2 className="services_title">Services</h2>
@@ -46,15 +46,20 @@ const Services = () => {
         <Grid
           container
           spacing={1}
-          direction="row"
+          // direction="row"
           // alignItems="center"
-          sx={{ width: "75%" }}
+          sx={{
+            width: { lg: "65%", md: "60%", sm: "65%", xs: "100%" },
+            mb: "30px",
+          }}
         >
           {data.map((item) => (
             <Grid
               item
               lg={2.4}
               md={4}
+              sm={4}
+              xs={4}
               id={item.id}
               sx={{
                 display: "flex",
@@ -68,28 +73,49 @@ const Services = () => {
                 onClick={(e) => handleCategory(e)}
               >
                 <img src={item.image} alt="" />
-                <span style={{ fontSize: "22px" }}>{item.text}</span>
+                <span>{item.text}</span>
               </div>
             </Grid>
           ))}
         </Grid>
         <Grid
           container
-          direction="column"
-          sx={{ width: "25%" }}
-          spacing={4}
+          // direction="row"
+          sx={{
+            width: { lg: "35%", md: "40%", sm: "35%", xs: "100%" },
+            flexDirection: {
+              lg: "column",
+              md: "column",
+              sm: "column",
+              xs: "row",
+            },
+            gap: { sm: "5px", md: "7px" },
+          }}
+          spacing={2}
           justifyContent="flex-start"
           alignItems="center"
         >
           {dataGroupItems.map((group) =>
             group.category == currentCategory ? (
-              <Grid item>
+              <Grid
+                item
+                lg={1}
+                md={1}
+                sm={1}
+                xs={6}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Link to={group.link}>
                   <div className="services_group_items">
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
+                        justifyContent: "center",
                         gap: "18px",
                         padding: "10px",
                       }}
@@ -104,13 +130,12 @@ const Services = () => {
                         {group.name}
                       </span>
                     </Box>
-                    <Grid item>
-                      <img
-                        style={{ paddingRight: "20px" }}
-                        src={arrowright}
-                        alt="arrowright"
-                      />
-                    </Grid>
+
+                    <img
+                      style={{ paddingRight: "20px" }}
+                      src={arrowright}
+                      alt="arrowright"
+                    />
                   </div>
                 </Link>
               </Grid>

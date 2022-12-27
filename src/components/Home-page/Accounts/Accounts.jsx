@@ -14,7 +14,7 @@ const Accounts = () => {
         direction="row"
         spacing={1}
         backgroundColor="#e5e5e5"
-        sx={{ padding: "40px" }}
+        sx={{ padding: { lg: "40px", md: "40px", sm: "20px", xs: "10px" } }}
       >
         {dataAccounts.map((item) => (
           <Grid

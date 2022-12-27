@@ -1,10 +1,14 @@
 .offers_images {
-  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
   height: 430px;
   overflow: hidden;
   /* border: 1px solid violet; */
   position: relative;
   border-radius: 15px;
+  /* border: 1px solid green; */
 }
 
 .offers_images img {
@@ -14,7 +18,7 @@
 
 .offers_titles {
   position: absolute;
-  top: 380px;
+  top: 85%;
   left: 0;
   width: 100%;
   color: white;
@@ -24,11 +28,28 @@
 }
 
 @media (max-width: 1450px) {
-  .offers_images {
+  .offers_images img {
     width: 300px;
-    height: 330px;
+    height: 380px;
+    border-radius: 15px;
   }
   .offers_titles {
-    top: 280px;
+    top: 330px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .offers_titles {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 450px) {
+  .offers_images {
+    width: 280px;
+  }
+  .offers_images img {
+    width: 280px;
+    height: 370px;
   }
 }
